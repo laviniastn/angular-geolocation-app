@@ -1,0 +1,42 @@
+label {
+  clear: left;
+  width: 250px;
+  text-align: right;
+}
+
+input {
+  float: left;
+  width: 300px;
+  height: 30px;
+  padding: 12px 20px;
+  margin: 8px 8px;
+  border: 0;
+  outline: 0;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  border: none;
+  margin: 8px 8px;
+  float: left;
+  width: 100px;
+  height: 30px;
+  border-radius: 8px;
+  background-color: #82848c;
+  color: #fff;
+}
+
+.search-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.search {
+  border: none;
+  border-radius: 5px;
+  height: 200px;
+  width: 450px;
+  margin-left: 450px;
+  padding-top: 50px;
+}

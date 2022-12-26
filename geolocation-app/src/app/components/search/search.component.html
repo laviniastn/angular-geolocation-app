@@ -1,0 +1,25 @@
+<div class="search">
+  <form class="search-form">
+    <ol>
+      <li>
+        <mat-form-field appearance="fill">
+          <mat-label>What's your name?</mat-label>
+          <input matInput [(ngModel)]="name" />
+        </mat-form-field>
+      </li>
+      <li>
+        <button mat-raised-button (click)="openDialog()">Pick one</button>
+      </li>
+      <li *ngIf="animal">
+        You chose: <i>{{ animal }}</i>
+      </li>
+    </ol>
+    <!-- <input
+      type="text"
+      id="ip"
+      name="ip"
+      placeholder="Enter your IP ..."
+    /><br /><br />
+    <button (click)="myFunc()">Get</button> -->
+  </form>
+</div>
