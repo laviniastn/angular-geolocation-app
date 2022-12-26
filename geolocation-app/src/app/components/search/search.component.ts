@@ -18,25 +18,25 @@ export class SearchComponent {
     const dialogRef = this.dialog.open(DialogConfirmComponent, {
       maxWidth: '100vw',
       maxHeight: '100vh',
-      height: '80%',
+      height: '70%',
       width: '30%',
       data: {
-        message: ip,
+        message: 'IP: ' + ip,
         buttonText: {
           ok: 'Save',
-          cancel: 'No',
+          cancel: 'Cancel',
         },
       },
     });
-    const snack = this.snackBar.open('Snack bar open before dialog');
+    // const snack = this.snackBar.open('Snack bar open before dialog');
 
     dialogRef.afterClosed().subscribe((confirmed: boolean) => {
       if (confirmed) {
-        snack.dismiss();
+        // snack.dismiss();
         const a = document.createElement('a');
         a.click();
         a.remove();
-        snack.dismiss();
+        // snack.dismiss();
         this.snackBar.open('Closing snack bar in a few seconds', 'Fechar', {
           duration: 2000,
         });

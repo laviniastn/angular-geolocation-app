@@ -1,0 +1,20 @@
+.btn-align {
+  display: flex;
+  position: fixed;
+  bottom: 5%;
+  background: transparent;
+  width: 30%;
+}
+
+button {
+  margin-right: 120px;
+  margin-left: 50px;
+  border-radius: 8px;
+  border: none;
+  width: 100px;
+  height: 30px;
+}
+
+div {
+  background-color: #ffffff;
+}
