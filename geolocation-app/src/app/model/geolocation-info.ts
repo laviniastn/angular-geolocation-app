@@ -1,0 +1,29 @@
+export interface GeolocationInfo {
+  ip: any;
+  network: any;
+  version: any;
+  city: any;
+  region: any;
+  region_code: any;
+  country: any;
+  country_name: any;
+  country_code: any;
+  country_code_iso3: any;
+  country_capital: any;
+  country_tld: any;
+  continent_code: any;
+  in_eu: any;
+  postal: any;
+  latitude: any;
+  longitude: any;
+  timezone: any;
+  utc_offset: any;
+  country_calling_code: any;
+  currency: any;
+  currency_name: any;
+  languages: any;
+  country_area: any;
+  country_population: any;
+  asn: any;
+  org: any;
+}

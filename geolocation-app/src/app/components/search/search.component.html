@@ -1,4 +1,10 @@
 <div class="search">
-  <input type="text" id="ip" name="ip" #ip />
-  <button mat-button (click)="openDialog(ip.value)">Search Location</button>
+  <input
+    type="text"
+    id="ip"
+    name="ip"
+    placeholder="Enter IP address (optional) ..."
+    #ip
+  />
+  <button mat-button (click)="openDialog(ip.value)">Get Location</button>
 </div>

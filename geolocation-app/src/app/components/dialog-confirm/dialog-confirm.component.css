@@ -1,20 +1,22 @@
 .btn-align {
-  display: flex;
-  position: fixed;
   bottom: 5%;
   background: transparent;
   width: 30%;
+  align-items: center;
 }
 
 button {
-  margin-right: 120px;
-  margin-left: 50px;
   border-radius: 8px;
   border: none;
   width: 100px;
   height: 30px;
+  background-color: #82848c;
+  color: #fff;
 }
 
-div {
-  background-color: #ffffff;
+ul {
+  margin-top: 20px;
+}
+li {
+  margin-top: 10px;
 }

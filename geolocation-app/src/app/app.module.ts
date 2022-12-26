@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, SearchComponent, DialogConfirmComponent],
@@ -22,6 +23,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FormsModule,
     MatSnackBarModule,
     MatDialogModule,
+    HttpClientModule,
   ],
   exports: [MatFormFieldModule],
   providers: [],

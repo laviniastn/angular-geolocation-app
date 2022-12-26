@@ -1,19 +1,24 @@
 <mat-dialog-content>
-  <p>
-    {{ message }}
-  </p>
+  <div>
+    <p><b>Your Current Location Details</b></p>
+
+    <ul>
+      <li><b>IP:</b> {{ geoInfo?.ip }}</li>
+      <li><b>City:</b> {{ geoInfo?.city }}</li>
+      <li><b>Region:</b> {{ geoInfo?.region }}</li>
+      <li><b>Country Name:</b>{{ geoInfo?.country_name }}</li>
+      <li><b>Continent Code:</b>{{ geoInfo?.continent_code }}</li>
+      <li><b>Latitude:</b> {{ geoInfo?.latitude }}</li>
+      <li><b>Longitude:</b> {{ geoInfo?.longitude }}</li>
+      <li><b>UTC Offset:</b>{{ geoInfo?.utc_offset }}</li>
+      <li><b>Currency: </b>{{ geoInfo?.currency }}</li>
+      <li><b>Languages:</b> {{ geoInfo?.languages }}</li>
+    </ul>
+  </div>
 </mat-dialog-content>
 
 <mat-dialog-actions align="center">
   <div class="btn-align">
-    <button
-      mat-raised-button
-      color="primary"
-      (click)="onConfirmClick()"
-      tabindex="1"
-    >
-      {{ confirmButtonText }}
-    </button>
     <button mat-raised-button mat-dialog-close tabindex="-1">
       {{ cancelButtonText }}
     </button>
