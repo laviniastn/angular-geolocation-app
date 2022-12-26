@@ -20,7 +20,7 @@ button {
   border: none;
   margin: 8px 8px;
   float: left;
-  width: 100px;
+  width: 200px;
   height: 30px;
   border-radius: 8px;
   background-color: #82848c;
@@ -33,10 +33,10 @@ button {
 }
 
 .search {
-  border: none;
+  border: 1px crimson;
   border-radius: 5px;
   height: 200px;
-  width: 450px;
-  margin-left: 450px;
+  width: 550px;
+  margin-left: 350px;
   padding-top: 50px;
 }

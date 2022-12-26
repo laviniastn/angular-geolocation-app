@@ -8,15 +8,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SearchComponent } from './components/search/search.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogConfirmComponent } from './components/dialog-confirm/dialog-confirm.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
-  declarations: [AppComponent, SearchComponent],
+  declarations: [AppComponent, SearchComponent, DialogConfirmComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
     FormsModule,
+    MatSnackBarModule,
+    MatDialogModule,
   ],
   exports: [MatFormFieldModule],
   providers: [],

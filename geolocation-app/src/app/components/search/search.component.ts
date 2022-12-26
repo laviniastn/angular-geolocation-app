@@ -1,49 +1,46 @@
-import { Component, Inject } from '@angular/core';
-import {
-  MatDialog,
-  MAT_DIALOG_DATA,
-  MatDialogRef,
-} from '@angular/material/dialog';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { Component, Inject, VERSION } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { DialogConfirmComponent } from '../dialog-confirm/dialog-confirm.component';
 
 @Component({
-  selector: 'app-search',
+  selector: 'search',
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent {
-  animal: string | undefined;
-  name: string | undefined;
+  version = VERSION;
 
-  constructor(public dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, private snackBar: MatSnackBar) {}
 
-  openDialog(): void {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      data: { name: this.name, animal: this.animal },
+  openDialog(ip: string) {
+    const dialogRef = this.dialog.open(DialogConfirmComponent, {
+      maxWidth: '100vw',
+      maxHeight: '100vh',
+      height: '80%',
+      width: '30%',
+      data: {
+        message: ip,
+        buttonText: {
+          ok: 'Save',
+          cancel: 'No',
+        },
+      },
     });
+    const snack = this.snackBar.open('Snack bar open before dialog');
 
-    dialogRef.afterClosed().subscribe((result) => {
-      console.log('The dialog was closed');
-      this.animal = result;
+    dialogRef.afterClosed().subscribe((confirmed: boolean) => {
+      if (confirmed) {
+        snack.dismiss();
+        const a = document.createElement('a');
+        a.click();
+        a.remove();
+        snack.dismiss();
+        this.snackBar.open('Closing snack bar in a few seconds', 'Fechar', {
+          duration: 2000,
+        });
+      }
     });
-  }
-}
-
-@Component({
-  selector: 'dialog',
-  templateUrl: './dialog.component.html',
-})
-export class DialogOverviewExampleDialog {
-  constructor(
-    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData
-  ) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
   }
 }
